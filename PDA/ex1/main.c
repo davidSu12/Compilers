@@ -6,13 +6,6 @@
 #define MAX_SIZE 256
 
 
-/*
-    THIS PDA ONLY PARSES THE CFL FORMED BY THE CFG:
-    S -> (S)S
-    S -> ()
-    S -> \epsilon   
-
-*/
 
 struct node{
     char obj;
@@ -92,7 +85,7 @@ void pop(){
     }else{
          struct node * t = temp;
          temp = temp -> next;
-         free(temp);
+         free(t);
     };
 }
 
